@@ -26,4 +26,28 @@ public class UserRepository {
 		User user = mongo.operation().findOne(searchUserQuery, User.class);
 		return user;
 	} 
+	
+	public void updateUserTologged(String name) {
+		User user = getUserByName(name);
+		user.setLoggedIn(true);
+		mongo.operation().save(user);
+	}
+	
+	public void updateAllToNotLogged(String name) {
+		User user = getUserByName(name);
+		user.setPoints(0);
+		user.setLoggedIn(false);
+		mongo.operation().save(user, "user");
+		mongo.operation().remove(user, "session");
+		
+	}
+	
+	public void updateUserPoints(String name, Integer points) {
+		User user = getUserByName(name);
+		user.setPoints(user.getPoints() + points);
+		mongo.operation().save(user, "session");
+		
+	}
+	
+	
 }

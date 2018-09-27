@@ -12,15 +12,36 @@ public class User {
 	
 	private String name;
 	private String nVictories;
+	private Boolean loggedIn;
+	private Integer points;
 	
 	public User() {}
-	public User(ObjectId _id, String name, String nVictories) {
+	public User(ObjectId _id, String name, String nVictories, Boolean loggedIn, Integer points) {
 		super();
 		this._id = _id;
 		this.name = name;
 		this.nVictories = nVictories;
+		this.loggedIn = loggedIn;
+		this.points = points;
 	}
 
+	
+	public Integer getPoints() {
+		return points;
+	}
+	
+	public void setPoints(Integer points) {
+		this.points = points;
+	}
+	
+	public Boolean getLoggedIn() {
+		return loggedIn;
+	}
+	
+	public void setLoggedIn(Boolean loggedIn) {
+		this.loggedIn = loggedIn;
+	}
+	
 	public String getName() {
 		return name;
 	}
