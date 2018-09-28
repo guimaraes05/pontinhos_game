@@ -13,7 +13,7 @@ public class MongoConfig extends AbstractMongoConfiguration {
 
 	@Override
 	public MongoClient mongoClient() {
-		return new MongoClient("mongodb://<dbuser>:<dbpassword>@ds031651.mlab.com:31651/heroku_zftqfprt");
+		return new MongoClient("mongodb://heroku_zftqfprt:he3ruo2be98ocjec2ohc9s3ht0@ds031651.mlab.com:31651/heroku_zftqfprt");
 	}
 
 	@Override
