@@ -13,12 +13,12 @@ public class MongoConfig extends AbstractMongoConfiguration {
 
 	@Override
 	public MongoClient mongoClient() {
-		return new MongoClient("localhost");
+		return new MongoClient("mongodb://<dbuser>:<dbpassword>@ds031651.mlab.com:31651/heroku_zftqfprt");
 	}
 
 	@Override
 	protected String getDatabaseName() {
-		return "pontinhos";
+		return "heroku_zftqfprt";
 	}
 
 	
