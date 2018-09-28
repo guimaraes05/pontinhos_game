@@ -20,6 +20,14 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	
+	@CrossOrigin(origins = "*")
+	@RequestMapping(value = "/teste", method = RequestMethod.GET)
+	public String teste() {
+		
+		return "vaiiiiiiiiiiiiiiiii";
+	}
+	
 	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public Users getUsers() {
